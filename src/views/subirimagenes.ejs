@@ -1,0 +1,61 @@
+<%- include('partials/head.ejs') %>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <div class="container">
+    <a class="navbar-brand" href="/"><%= title %></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+              <a href="/" class="nav-link">Salir</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <div class="fadeIn first">
+      <img src="https://proantioquia.org.co/wp-content/uploads/2016/09/Proantioquia-logos-aliados-Proteccio%CC%81n-1200x768.jpg" id="icon" alt="User Icon" />
+      <h2><%= cabecera %></h2>
+    </div>
+    <div class="container p-4" id="msjfile" style="display: none;" >
+      <div class="row">
+          <div class="col-md-12 mx-auto">
+              <div class="alert alert-success alert-dismissible fade show" role="alert">
+                  <p id="txtmsjfile"> </p>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <div class="container p-4" id="msj" style="display: none;">
+      <div class="row">
+          <div class="col-md-12 mx-auto">
+              <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                  <p id="txtmsj"></p>
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                  </button>
+              </div>
+          </div>
+      </div>
+    </div>
+    <form id='file-catcher' enctype="multipart/form-data">
+      <input id='file-input' type='file' accept="image/jpg,image/jpeg," multiple/>
+      <button type='submit'>
+        Submit
+      </button>
+    </form>
+    <div id="formFooter">
+      <div id='file-list-display' class="text-left"></div>
+    </div>
+
+  </div>
+</div>
+
+<%- include('partials/footer.ejs') %>
